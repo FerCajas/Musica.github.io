@@ -1,0 +1,253 @@
+.landing-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+    min-height: 80vh;         
+    margin: 0 auto;          
+}
+
+.landing-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1CB5E0;
+    margin-bottom: 20px;
+}
+
+.landing-page2{
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    min-height: 60vh;         
+    margin: 0 auto;          
+}
+
+
+.nota-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #1CB5E0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.nota-btn:hover {
+    background-color: #007BB5;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nota-btn:focus {
+    outline: none;
+}
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('Fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    color: #333;
+    padding-top: 120px;
+}
+
+
+
+
+.cover-section {
+    background-image: url('https://media.tenor.com/zXYG5f9DTaMAAAAM/milk-and-mocha-milk.gif');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+.landing-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1CB5E0;
+    margin-bottom: 20px;
+}
+
+
+.nota-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #1CB5E0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.nota-btn:hover {
+    background-color: #007BB5;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nota-btn:focus {
+    outline: none;
+}
+
+
+.music-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.controls {
+    margin-top: 20px;
+}
+
+button.btn {
+    background-color: #007BB5;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #005f77;
+}
+
+
+.nota-secuencia {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.nota-secuencia h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.nota-secuencia ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+.navbar {
+    background-color: #1CB5E0;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar .container-fluid {
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #FF5722;
+}
+
+
+.navbar.scroll {
+    background-color: #000851;
+}
+
+
+.nota-btn, #generate-music, .controls button {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.nota-btn {
+    background-color: #1CB5E0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nota-btn:hover {
+    background-color: #FF5722;
+}
+
+
+footer {
+    margin-top: 50px;
+    background-color: #1CB5E0;
+    color: black;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+footer a {
+    color:blue;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #FF5722;
+}
+
+
+@media (max-width: 768px) {
+    .navbar .container-fluid {
+        padding: 0 15px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .nota-btn {
+        font-size: 16px;
+    }
+}

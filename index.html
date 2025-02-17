@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.1.3/Tone.js" integrity="sha512-l/S587UA2X7JyCkDqZiEX+4OC6Hp8FC0PE1MFi3+KFLk3n1lxQAtSq8YTZ4ig2YFpJal2Jhz3H3iIFyv3KScFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#informacion">
+                            Información
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <div class="landing-page" id="inicio">
+            <div id="nota-options" class="nota-options text-center">
+                <h3>Selecciona tus notas</h3>
+                <button class="nota-btn" data-note="Do"><i class="fa-solid fa-circle"></i> Do</button>
+                <button class="nota-btn" data-note="Re"><i class="fa-solid fa-circle"></i> Re</button>
+                <button class="nota-btn" data-note="Mi"><i class="fa-solid fa-circle"></i> Mi</button>
+                <button class="nota-btn" data-note="Fa"><i class="fa-solid fa-circle"></i> Fa</button>
+                <button class="nota-btn" data-note="Sol"><i class="fa-solid fa-circle"></i> Sol</button>
+                <button class="nota-btn" data-note="La"><i class="fa-solid fa-circle"></i> La</button>
+                <button class="nota-btn" data-note="Si"><i class="fa-solid fa-circle"></i> Si</button>
+                <button class="nota-btn" data-note="Do (Octava alta)"><i class="fa-solid fa-circle"></i> Do (Octava alta)</button>
+            </div>
+
+            <br>
+            <button id="generate-music" class="btn btn-primary"><i class="fa-solid fa-music"></i> Generar Música</button>
+
+            <div id="music-output" class="music-output text-center">
+                <p>Musica generada</p>
+            </div>
+
+            <div class="controls text-center">
+                <button id="play" class="btn btn-success"><i class="fa-solid fa-play"></i> Reproducir</button>
+                <button id="modify" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Modificar</button>
+                <button id="new-sequence" class="btn btn-secondary"><i class="fa-solid fa-trash"></i> Nuevo</button>
+            </div>
+
+            <div id="nota-secuencia" class="nota-secuencia text-center" style="display: none;">
+                <h3>Secuencia de notas elegidas</h3>
+                <p id="secuencia-texto"></p>
+            </div>
+        </div>
+    
+    
+
+    <br>
+    <br>
+    
+    <div class="landing-page2" id="informacion">
+        <p style="color: black;  text-align: center;">
+            El arte de crear y organizar sonidos y silencios respetando los principios
+         fundamentales de la melodía, la armonía y el ritmo, mediante la intervención
+         de complejos procesos psicoanímicos, tambien es una forma de expresar los sentimientos, 
+         decir lo que llevas dentro y que cuesta tanto sacarlo de uno mismo. Puedes, a veces,
+          expresarlo en las canciones o melodías sin necesidad de decir ni una sola palabra.
+        </p>
+    </div>
+
+    <div class="wrapper">
+        <footer class="bg-dark text-center text-white p-4">
+            <div class="container">
+                <section class="mb-4">
+                    <a class="btn btn-outline-light m-1 facebook-link" target="_blank" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="btn btn-outline-light m-1 whatsapp-link" target="_blank" href="https://web.whatsapp.com/" role="button"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="btn btn-outline-light m-1 youtube-link" target="_blank" href="https://www.youtube.com/" role="button"><i class="fa-brands fa-youtube"></i></a>
+                </section>
+                <hr>
+                <div>
+                    <p>Email: fernandocajaschuqui@hotmail.com</p>
+                    <p>Cel: 0994886472</p>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                    <p>&copy; <span id="current-year"></span> Generador de Música. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="programa.js"></script>
+    <script>
+        document.getElementById("current-year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
