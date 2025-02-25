@@ -20,6 +20,10 @@ document.querySelectorAll('.nota-btn').forEach(button => {
         const note = button.getAttribute('data-note');
         secuencia.push(note);
         displaySequence(secuencia);
+        
+        // Reproducir el sonido de la nota clickeada
+        const noteSound = notasMap[note];
+        synth.triggerAttackRelease(noteSound, '8n'); 
     });
 });
 
@@ -43,7 +47,25 @@ document.getElementById('generate-music').addEventListener('click', function() {
 
 function displaySequence(seq) {
     const secuencialist = document.getElementById('secuencia-texto');
-    secuencialist.textContent = seq.join(' ');
+    secuencialist.innerHTML = '';  
+
+    seq.forEach((note, index) => {
+        const noteElement = document.createElement('span');
+        noteElement.classList.add('note-item');
+        noteElement.textContent = note;
+        
+        // Crear un botón para eliminar esta nota
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-note');
+        deleteButton.innerHTML = '&times;'; 
+        deleteButton.addEventListener('click', () => {
+            secuencia.splice(index, 1);  
+            displaySequence(secuencia);  
+        });
+
+        noteElement.appendChild(deleteButton);  
+        secuencialist.appendChild(noteElement);
+    });
 }
 
 function playSequence() {
@@ -91,6 +113,7 @@ document.getElementById('new-sequence').addEventListener('click', function() {
         confirmButtonText: 'OK'
     });
 });
+
 
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
