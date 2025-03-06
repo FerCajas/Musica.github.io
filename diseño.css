@@ -1,67 +1,3 @@
-.landing-page {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;     
-    min-height: 80vh;         
-    margin: 0 auto;          
-}
-
-.landing-page h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #1CB5E0;
-    margin-bottom: 20px;
-}
-
-.landing-page2{
-    background-color: aqua;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     
-    min-height: 60vh;         
-    margin: 0 auto;          
-}
-
-
-.nota-btn {
-    padding: 15px 30px;
-    font-size: 16px;
-    background-color: #1CB5E0;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-}
-
-.nota-btn:hover {
-    background-color: #007BB5;
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.nota-btn:focus {
-    outline: none;
-}
-
-
-
 
 body {
     font-family: 'Arial', sans-serif;
@@ -72,182 +8,109 @@ body {
     padding-top: 0;
     color: #333;
     padding-top: 120px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
-
-
-.cover-section {
-    background-image: url('https://media.tenor.com/zXYG5f9DTaMAAAAM/milk-and-mocha-milk.gif');
-    height: 300px;
-    background-size: cover;
-    background-position: center;
+.landing-page {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding-top: 50px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0 auto;
 }
 
-
-.landing-page h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #1CB5E0;
-    margin-bottom: 20px;
+.nota-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 
 
 .nota-btn {
     padding: 15px 30px;
     font-size: 16px;
-    background-color: #1CB5E0;
+    background-color: rgba(28, 181, 224, 0.9);
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 8px;
 }
 
 .nota-btn:hover {
-    background-color: #007BB5;
+    background-color: rgba(0, 123, 181, 1);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.nota-btn:focus {
-    outline: none;
-}
 
-
-.music-output {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-
-.controls {
+#music-output, .controls {
     margin-top: 20px;
 }
 
-button.btn {
-    background-color: #007BB5;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-button.btn:hover {
-    background-color: #005f77;
-}
-
-
-.nota-secuencia {
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: left;
-}
-
-.nota-secuencia h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.nota-secuencia ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-
-.navbar {
-    background-color: #1CB5E0;
+#generate-music {
+    background-color: rgba(255, 87, 34, 0.9);
     color: white;
     padding: 15px 30px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-.navbar .container-fluid {
-    width: 100%;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #FF5722;
-}
-
-
-.navbar.scroll {
-    background-color: #000851;
-}
-
-
-.nota-btn, #generate-music, .controls button {
-    font-size: 18px;
-    margin: 10px;
-}
-
-.nota-btn {
-    background-color: #1CB5E0;
-    color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.nota-btn:hover {
-    background-color: #FF5722;
+#generate-music:hover {
+    background-color: rgba(255, 61, 0, 1);
 }
 
 
-footer {
+.landing-page2 {
     margin-top: 50px;
-    background-color: #1CB5E0;
-    color: black;
-    padding: 20px 0;
-    position: relative;
+    background-color: rgba(0, 188, 212, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-footer a {
-    color:blue;
-    font-size: 20px;
-}
-
-footer a:hover {
-    color: #FF5722;
+.informacion-text {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+    line-height: 1.6;
 }
 
 
 @media (max-width: 768px) {
-    .navbar .container-fluid {
-        padding: 0 15px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 16px;
-    }
-
     .nota-btn {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .landing-page {
+        padding: 20px;
+    }
+
+    .landing-page2 {
+        padding: 20px;
+    }
+
+    .informacion-text {
+        font-size: 1rem;
     }
 }
