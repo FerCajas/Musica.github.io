@@ -34,9 +34,12 @@
         </div>
     </nav>
 
-     <div class="landing-page" id="inicio">
-            <div id="nota-options" class="nota-options text-center">
-                <h3>Selecciona tus notas</h3>
+    <div class="landing-page" id="inicio">
+        
+       
+        <div id="nota-options" class="nota-options text-center">
+            <h3>Selecciona tus notas</h3>
+            <div class="nota-btns">
                 <button class="nota-btn" data-note="Do"><i class="fa-solid fa-circle"></i> Do</button>
                 <button class="nota-btn" data-note="Re"><i class="fa-solid fa-circle"></i> Re</button>
                 <button class="nota-btn" data-note="Mi"><i class="fa-solid fa-circle"></i> Mi</button>
@@ -46,41 +49,67 @@
                 <button class="nota-btn" data-note="Si"><i class="fa-solid fa-circle"></i> Si</button>
                 <button class="nota-btn" data-note="Do (Octava alta)"><i class="fa-solid fa-circle"></i> Do (Octava alta)</button>
             </div>
-
-            <br>
-            <button id="generate-music" class="btn btn-primary"><i class="fa-solid fa-music"></i> Generar Música</button>
-
-            <div id="music-output" class="music-output text-center">
-                <p>Musica generada</p>
-            </div>
-
-            <div class="controls text-center">
-                <button id="play" class="btn btn-success"><i class="fa-solid fa-play"></i> Reproducir</button>
-                <button id="modify" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Modificar</button>
-                <button id="new-sequence" class="btn btn-secondary"><i class="fa-solid fa-trash"></i> Nuevo</button>
-            </div>
-
-            <div id="nota-secuencia" class="nota-secuencia text-center" style="display: none;">
-                <h3>Secuencia de notas elegidas</h3>
-                <p id="secuencia-texto"></p>
-            </div>
         </div>
     
+        <br>
     
+       
+        <div class="text-center">
+            <button id="generate-music" class="btn btn-primary">
+                <i class="fa-solid fa-music"></i> Generar Música
+            </button>
+        </div>
+    
+        <br>
+    
+      
+        <div id="music-output" class="music-output text-center">
+            <p>Musica generada</p>
+        </div>
+    
+        <br>
+    
+    
+        <div class="controls text-center">
+            <button id="play" class="btn btn-success" disabled><i class="fa-solid fa-play"></i> Reproducir</button>
+            <button id="modify" class="btn btn-warning" disabled><i class="fa-solid fa-pen"></i> Modificar</button>
+            <button id="new-sequence" class="btn btn-secondary" disabled><i class="fa-solid fa-trash"></i> Nuevo</button>
 
-    <br>
+        </div>
+
+    
+        <br>
+    
+    
+        <div id="nota-secuencia" class="nota-secuencia text-center" style="display: none;">
+            <h3>Secuencia de notas elegidas</h3>
+            <p id="secuencia-texto"></p>
+        </div>
+    </div>
+    
     <br>
     <hr>
     <div class="landing-page2" id="informacion">
-        <p style="color: black;  text-align: center;">
-            El arte de crear y organizar sonidos y silencios respetando los principios
-         fundamentales de la melodía, la armonía y el ritmo, mediante la intervención
-         de complejos procesos psicoanímicos, tambien es una forma de expresar los sentimientos, 
-         decir lo que llevas dentro y que cuesta tanto sacarlo de uno mismo. Puedes, a veces,
-          expresarlo en las canciones o melodías sin necesidad de decir ni una sola palabra.
-        </p>
+        <div class="row">
+            <div class="col">
+                <p class="informacion-text">
+                    El arte de crear y organizar sonidos y silencios respetando los principios 
+                    fundamentales de la melodía, la armonía y el ritmo, mediante la intervención 
+                    de complejos procesos psicoanímicos, también es una forma de expresar los 
+                    sentimientos, decir lo que llevas dentro y que cuesta tanto sacarlo de uno 
+                    mismo. Puedes, a veces, expresarlo en las canciones o melodías sin necesidad 
+                    de decir ni una sola palabra.
+                </p>
+            </div>
+            <div class="col">
+                <img src="https://anthropologyandpractice.com/wp-content/uploads/2018/03/musica-como-identidad.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+        
+
     </div>
     <br>
+
     <div class="wrapper">
         <footer class="bg-dark text-center text-white p-4">
             <div class="container">
@@ -95,16 +124,13 @@
                     <p>Cel: 0994886472</p>
                 </div>
                 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-                    <p>&copy; <span id="current-year"></span> Generador de Música. Todos los derechos reservados.</p>
+                    <p>&copy; <span id="current-year"></span> Generador de Música. Derecho de Autor.</p>
                 </div>
             </div>
         </footer>
     </div>
 
     <script src="programa.js"></script>
-    <script>
-        document.getElementById("current-year").innerHTML = new Date().getFullYear();
-    </script>
 </body>
 
 </html>
