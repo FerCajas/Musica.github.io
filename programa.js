@@ -13,17 +13,15 @@ const notasMap = {
     "Do (Octava alta)": "C5"
 };
 
-const ritmoMap = ['8n', '4n', '16n']; 
+const ritmoMap = ['8n', '4n', '16n'];
 
 document.querySelectorAll('.nota-btn').forEach(button => {
     button.addEventListener('click', () => {
         const note = button.getAttribute('data-note');
         secuencia.push(note);
         displaySequence(secuencia);
-        
-        
         const noteSound = notasMap[note];
-        synth.triggerAttackRelease(noteSound, '8n'); 
+        synth.triggerAttackRelease(noteSound, '8n');
     });
 });
 
@@ -43,14 +41,11 @@ document.getElementById('generate-music').addEventListener('click', function() {
     document.getElementById('play').style.display = 'inline-block'; 
     document.getElementById('modify').style.display = 'inline-block';
     document.getElementById('new-sequence').style.display = 'inline-block';
-
-    
     document.getElementById('play').disabled = false;
     document.getElementById('modify').disabled = false;
     document.getElementById('new-sequence').disabled = false;
     document.getElementById('generate-music').disabled = true;
 });
-
 
 function displaySequence(seq) {
     const secuencialist = document.getElementById('secuencia-texto');
@@ -66,7 +61,7 @@ function displaySequence(seq) {
         deleteButton.innerHTML = '&times;'; 
         deleteButton.addEventListener('click', () => {
             secuencia.splice(index, 1);  
-            displaySequence(secuencia);  
+            displaySequence(secuencia);
         });
 
         noteElement.appendChild(deleteButton);  
@@ -96,7 +91,6 @@ function playSequence() {
 document.getElementById('play').addEventListener('click', playSequence);
 
 document.getElementById('modify').addEventListener('click', function() {
-    
     if (secuencia.length === 0) {
         Swal.fire({
             title: '¡No hay notas seleccionadas!',
@@ -107,15 +101,14 @@ document.getElementById('modify').addEventListener('click', function() {
         return;
     }
 
-    
     const notesList = secuencia.map((note, index) => {
         return `<li>
                     ${note} 
                     <button class="delete-note" onclick="deleteNote(${index})">Eliminar</button>
+                    <button class="edit-note" onclick="editNote(${index})">Editar</button>
                 </li>`;
     }).join('');
 
-    
     Swal.fire({
         title: 'Modificar Notas',
         html: `
@@ -142,7 +135,6 @@ document.getElementById('modify').addEventListener('click', function() {
         focusConfirm: false
     });
 
-   
     document.getElementById('add-note').addEventListener('click', function() {
         const newNote = document.getElementById('new-note').value;
         secuencia.push(newNote);
@@ -150,20 +142,46 @@ document.getElementById('modify').addEventListener('click', function() {
     });
 });
 
-
 function deleteNote(index) {
     secuencia.splice(index, 1);
     displaySequence(secuencia);  
 }
 
+function editNote(index) {
+    const currentNote = secuencia[index];
+    Swal.fire({
+        title: 'Modificar Nota',
+        html: `
+            <p>Modificar nota: ${currentNote}</p>
+            <label for="edit-note">Selecciona la nueva nota:</label>
+            <select id="edit-note">
+                <option value="Do">Do</option>
+                <option value="Re">Re</option>
+                <option value="Mi">Mi</option>
+                <option value="Fa">Fa</option>
+                <option value="Sol">Sol</option>
+                <option value="La">La</option>
+                <option value="Si">Si</option>
+                <option value="Do (Octava alta)">Do (Octava alta)</option>
+            </select>
+        `,
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Guardar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const newNote = document.getElementById('edit-note').value;
+            secuencia[index] = newNote;
+            displaySequence(secuencia);
+        }
+    });
+}
 
 document.getElementById('new-sequence').addEventListener('click', function() {
     secuencia = [];
     document.getElementById('secuencia-texto').textContent = '';
     document.getElementById('nota-secuencia').style.display = 'none';  
     document.getElementById('music-output').innerHTML = 'Musica generada';
-    
-   
     document.getElementById('play').disabled = true;
     document.getElementById('modify').disabled = true;
     document.getElementById('new-sequence').disabled = true;
@@ -177,7 +195,6 @@ document.getElementById('new-sequence').addEventListener('click', function() {
     });
 });
 
-
 document.getElementById('generate-music').addEventListener('click', function() {
     if (secuencia.length === 0) {
         Swal.fire({
@@ -189,17 +206,15 @@ document.getElementById('generate-music').addEventListener('click', function() {
         return;
     }
 
-   
     displaySequence(secuencia);
     document.getElementById('music-output').innerHTML = `Tu música ha sido generada: Haz click en reproducir`;
     document.getElementById('nota-secuencia').style.display = 'block';
-
-
     document.getElementById('play').disabled = false;
     document.getElementById('modify').disabled = false;
     document.getElementById('new-sequence').disabled = false;
     document.getElementById('generate-music').disabled = true;
 });
+
 
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
