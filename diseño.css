@@ -12,9 +12,8 @@ body {
     box-sizing: border-box;
 }
 
-
 .landing-page {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.3); 
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -27,7 +26,22 @@ body {
     align-items: center;
     min-height: 80vh;
     margin: 0 auto;
+    position: relative;
+    animation: fadeIn 1s ease-out; 
 }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 .nota-btns {
     display: flex;
@@ -45,19 +59,33 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s ease;
     margin: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .nota-btn:hover {
     background-color: rgba(0, 123, 181, 1);
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 
 #music-output, .controls {
     margin-top: 20px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out forwards; 
+}
+
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -69,12 +97,129 @@ body {
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    margin-top: 20px;
 }
+
 
 #generate-music:hover {
     background-color: rgba(255, 61, 0, 1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
 }
+
+
+.controls button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+
+.controls button:hover {
+    background-color: rgba(0, 123, 181, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+#play {
+    background-color: rgba(34, 193, 195, 0.9);
+    color: white;
+}
+
+#modify {
+    background-color: rgba(255, 159, 64, 0.9);
+    color: white;
+}
+
+#new-sequence {
+    background-color: rgba(255, 69, 58, 0.9);
+    color: white;
+}
+
+
+#play:hover {
+    background-color: rgba(34, 170, 170, 1);
+    transform: scale(1.05);
+}
+
+#modify:hover {
+    background-color: rgba(255, 140, 50, 1);
+    transform: scale(1.05);
+}
+
+#new-sequence:hover {
+    background-color: rgba(255, 50, 40, 1);
+    transform: scale(1.05);
+}
+
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black;
+}
+
+
+.navbar-nav .nav-link.active {
+    color: black !important; 
+}
+
+
+
+.landing-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(250, 200, 150, 0.3), rgba(255, 100, 150, 0.4));
+    z-index: -1;
+    animation: pulse 6s infinite alternate; 
+}
+
+
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
 
 
 .landing-page2 {
