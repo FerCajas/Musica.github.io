@@ -51,23 +51,17 @@ function displaySequence(seq) {
     const secuencialist = document.getElementById('secuencia-texto');
     secuencialist.innerHTML = '';  
 
-    seq.forEach((note, index) => {
+    seq.forEach((note) => {
         const noteElement = document.createElement('span');
         noteElement.classList.add('note-item');
         noteElement.textContent = note;
-        
-        const deleteButton = document.createElement('button');
-        deleteButton.classList.add('delete-note');
-        deleteButton.innerHTML = '&times;'; 
-        deleteButton.addEventListener('click', () => {
-            secuencia.splice(index, 1);  
-            displaySequence(secuencia);
-        });
 
-        noteElement.appendChild(deleteButton);  
+       
         secuencialist.appendChild(noteElement);
+        secuencialist.appendChild(document.createTextNode('\u00A0'));  
     });
 }
+
 
 function playSequence() {
     if (playing) return;
@@ -107,7 +101,7 @@ document.getElementById('modify').addEventListener('click', function() {
                     <button class="delete-note" onclick="deleteNote(${index})">Eliminar</button>
                     <button class="edit-note" onclick="editNote(${index})">Editar</button>
                 </li>`;
-    }).join('');
+    }).join(''); 
 
     Swal.fire({
         title: 'Modificar Notas',
