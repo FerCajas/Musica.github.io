@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="navbar">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,15 +24,18 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#inicio">Inicio</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active" href="#informacion">
-                            Información
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#informacion">Información</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    
+    
+  
+    
 
     <div class="landing-page" id="inicio">
         
@@ -90,41 +93,82 @@
     <br>
     <hr>
     <div class="landing-page2" id="informacion">
-        <div class="row">
-            <div class="col">
-                <p class="informacion-text">
-                    El arte de crear y organizar sonidos y silencios respetando los principios 
-                    fundamentales de la melodía, la armonía y el ritmo, mediante la intervención 
-                    de complejos procesos psicoanímicos, también es una forma de expresar los 
-                    sentimientos, decir lo que llevas dentro y que cuesta tanto sacarlo de uno 
-                    mismo. Puedes, a veces, expresarlo en las canciones o melodías sin necesidad 
-                    de decir ni una sola palabra.
-                </p>
-            </div>
-            <div class="col">
-                <img src="https://anthropologyandpractice.com/wp-content/uploads/2018/03/musica-como-identidad.jpg" class="img-fluid" alt="Responsive image">
+        <div class="container py-5">
+            <div class="row align-items-center">
+              
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <p class="informacion-text text-justify">
+                        El arte de crear y organizar sonidos y silencios respetando los principios 
+                        fundamentales de la melodía, la armonía y el ritmo, mediante la intervención 
+                        de complejos procesos psicoanímicos, también es una forma de expresar los 
+                        sentimientos, decir lo que llevas dentro y que cuesta tanto sacarlo de uno 
+                        mismo. Puedes, a veces, expresarlo en las canciones o melodías sin necesidad 
+                        de decir ni una sola palabra.
+                    </p>
+                </div>
+    
+               
+                <div class="col-lg-6">
+                    <img src="https://anthropologyandpractice.com/wp-content/uploads/2018/03/musica-como-identidad.jpg" class="img-fluid rounded" alt="Responsive image">
+                </div>
             </div>
         </div>
-        
-
     </div>
+    
     <br>
 
     <div class="wrapper">
         <footer class="bg-dark text-center text-white p-4">
             <div class="container">
+    
                 <section class="mb-4">
-                    <a class="btn btn-outline-light m-1 facebook-link" target="_blank" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="btn btn-outline-light m-1 whatsapp-link" target="_blank" href="https://web.whatsapp.com/" role="button"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a class="btn btn-outline-light m-1 youtube-link" target="_blank" href="https://www.youtube.com/" role="button"><i class="fa-brands fa-youtube"></i></a>
+                    <a class="btn btn-outline-light m-1 facebook-link" target="_blank" href="https://www.facebook.com/" role="button">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-outline-light m-1 whatsapp-link" target="_blank" href="https://web.whatsapp.com/" role="button">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a class="btn btn-outline-light m-1 youtube-link" target="_blank" href="https://www.youtube.com/" role="button">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
                 </section>
+                
+             
+                <section class="row mb-4">
+                    <div class="col-md-4">
+                        <h5>Generador de Música</h5>
+                        <p>Tu plataforma para crear música fácil y rápido. Únete a nuestra comunidad y comparte tu talento.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Enlaces rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Inicio</a></li>
+                            <li><a href="#" class="text-white">Servicios</a></li>
+                            <li><a href="#" class="text-white">Blog</a></li>
+                            <li><a href="#" class="text-white">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contacto</h5>
+                        <p>Teléfono: <a href="#" class="text-white">0994886472</a></p>
+                        <p>Email: <a href="#" class="text-white">fernandocajaschuqui@hotmail.com</a></p>
+                    </div>
+                </section>
+                
                 <hr>
-                <div>
-                    <p>Email: fernandocajaschuqui@hotmail.com</p>
-                    <p>Cel: 0994886472</p>
-                </div>
+                
+              
+                <section class="mb-4">
+                    <p class="text-white">© <span id="current-year"></span> Generador de Música. Todos los derechos reservados.</p>
+                    <p class="text-white">
+                        <a href="#" class="text-white">Política de privacidad</a> |
+                        <a href="#" class="text-white">Términos de uso</a>
+                    </p>
+                </section>
+    
+                
                 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-                    <p>&copy; <span id="current-year"></span> Generador de Música. Derecho de Autor.</p>
+                    <img src="Logo.png" class="img-fluid rounded" alt="Responsive image">
                 </div>
             </div>
         </footer>
