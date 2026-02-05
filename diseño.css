@@ -1,3 +1,18 @@
+body {
+    font-family: 'Outfit', 'Arial', sans-serif;
+    background-image: url('Fondo_M.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #222;
+    padding-top: 120px;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
 .nota-options h3 {
     font-weight: 700;
     margin-bottom: 20px;
@@ -114,7 +129,7 @@ footer .btn-outline-light:hover {
     box-shadow: 0 8px 18px rgba(255,152,0,0.5);
 }
 
-/* LOGO */
+
 footer img {
     max-width: 120px;
     opacity: 0.85;
