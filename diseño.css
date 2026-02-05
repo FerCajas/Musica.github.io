@@ -1,15 +1,13 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('Fondo_M.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 0;
-    color: #333;
-    padding-top: 120px;
-    margin: 0;
-    box-sizing: border-box;
+         font-family: 'Outfit', 'Arial', sans-serif;
+     	    background-image: url('Fondo_M.jpg');
+     	    background-size: cover;
+     	    background-position: center;
+     	    background-repeat: no-repeat;
+     	    color: #333;
+     	    padding-top: 120px;
+    	    margin: 0;
+      box-sizing: border-box;
 }
 
 .landing-page {
@@ -173,27 +171,33 @@ body {
 
 
 #navbar {
-    background-color: rgba(0, 0, 0, 0.3); 
-    transition: background-color 0.3s ease-in-out;
+  background-color: rgba(7, 15, 43, 0.35); 
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+  z-index: 1030;
 }
 
 
 #navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(7, 15, 43, 0.8); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 
 .navbar-nav .nav-link {
-    transition: color 0.3s ease-in-out;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: black;
+    color: #ffe3b3;
+    transform: translateY(-2px);
 }
 
 
 .navbar-nav .nav-link.active {
-    color: black !important; 
+    color: #ffe3b3 !important; 
 }
 
 
