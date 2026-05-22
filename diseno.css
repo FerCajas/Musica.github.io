@@ -1,11 +1,10 @@
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Outfit', 'Arial', sans-serif;
     background-image: url('Fondo_M.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 0;
     color: #333;
     padding-top: 120px;
     margin: 0;
@@ -173,27 +172,64 @@ body {
 
 
 #navbar {
-    background-color: rgba(0, 0, 0, 0.3); 
-    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(7, 15, 43, 0.35); 
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    z-index: 1030;
 }
 
 
 #navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(7, 15, 43, 0.8); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 
 .navbar-nav .nav-link {
-    transition: color 0.3s ease-in-out;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: black;
+    color: #ffe3b3;
+    transform: translateY(-2px);
 }
 
 
 .navbar-nav .nav-link.active {
-    color: black !important; 
+    color: #ffe3b3 !important; 
+}
+
+.brand-text {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #ffe3b3, #b5f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.brand-text:hover {
+    color: transparent;
+}
+
+.animated-navbar {
+    animation: navGlow 6s ease-in-out infinite;
+}
+
+@keyframes navGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 227, 179, 0.1);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(255, 227, 179, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255, 227, 179, 0.1);
+    }
 }
 
 
@@ -233,6 +269,75 @@ body {
     margin: 0 auto;
 }
 
+.animated-footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, rgba(26, 10, 46, 0.96), rgba(83, 28, 121, 0.95), rgba(12, 82, 124, 0.94));
+    background-size: 200% 200%;
+    animation: footerWave 12s ease-in-out infinite;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.animated-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 183, 77, 0.3), transparent 55%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.animated-footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom left, rgba(126, 242, 255, 0.3), transparent 55%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.animated-footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+.animated-footer .btn-outline-light {
+    border-width: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-footer .btn-outline-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 227, 179, 0.25);
+    background-color: rgba(255, 227, 179, 0.2);
+}
+
+.animated-footer h5 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.animated-footer p,
+.animated-footer a {
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.animated-footer a:hover {
+    color: #ffd166;
+}
+
+@keyframes footerWave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .informacion-text {
     font-size: 1.2rem;
     color: black;
